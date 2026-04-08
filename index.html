@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse Tic-Tac-Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="header">
+        <div>
+          <span class="title">Reverse Tic Tac Toe</span>
+          <p class="subtitle">Make 3 in a row and you lose.</p>
+        </div>
+        <div class="header-controls">
+          <div class="mode-toggle" role="group" aria-label="Game mode">
+            <button class="mode-btn on" id="btn2p" type="button">2P</button>
+            <button class="mode-btn" id="btnAI" type="button">vs AI</button>
+          </div>
+          <div class="difficulty-toggle hidden" id="difficulty-toggle" role="group" aria-label="AI difficulty">
+            <button class="mode-btn on" id="diff-easy" type="button">Easy</button>
+            <button class="mode-btn" id="diff-medium" type="button">Medium</button>
+            <button class="mode-btn" id="diff-hard" type="button">Hard</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="scores" aria-label="Scoreboard">
+        <div class="pill active" id="pX">X — 0</div>
+        <div class="draws">draws: <span id="pD">0</span></div>
+        <div class="pill" id="pO">O — 0</div>
+      </section>
+
+      <p class="status" id="status" aria-live="polite">X to play</p>
+
+      <section class="board" id="board" aria-label="Reverse tic tac toe board">
+        <button class="cell" id="c0" data-index="0" aria-label="Cell 1" type="button"></button>
+        <button class="cell" id="c1" data-index="1" aria-label="Cell 2" type="button"></button>
+        <button class="cell" id="c2" data-index="2" aria-label="Cell 3" type="button"></button>
+        <button class="cell" id="c3" data-index="3" aria-label="Cell 4" type="button"></button>
+        <button class="cell" id="c4" data-index="4" aria-label="Cell 5" type="button"></button>
+        <button class="cell" id="c5" data-index="5" aria-label="Cell 6" type="button"></button>
+        <button class="cell" id="c6" data-index="6" aria-label="Cell 7" type="button"></button>
+        <button class="cell" id="c7" data-index="7" aria-label="Cell 8" type="button"></button>
+        <button class="cell" id="c8" data-index="8" aria-label="Cell 9" type="button"></button>
+      </section>
+
+      <section class="actions" aria-label="Actions">
+        <button class="btn" id="new-game" type="button">New Game</button>
+        <button class="btn" id="reset-scores" type="button">Reset Scores</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
